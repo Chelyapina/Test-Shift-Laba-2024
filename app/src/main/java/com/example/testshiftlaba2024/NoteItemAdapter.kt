@@ -29,7 +29,7 @@ class NoteItemAdapter (private val clickListener: (noteId : Long) -> Unit)
         }
 
         fun bind(item: Note, clickListener: (noteId: Long) -> Unit){
-//            binding.note = item
+            binding.note = item
             binding.root.setOnClickListener { clickListener(item.noteId) }
         }
     }

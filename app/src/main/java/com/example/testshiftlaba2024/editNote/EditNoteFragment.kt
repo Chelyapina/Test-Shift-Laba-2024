@@ -1,4 +1,4 @@
-package com.example.testshiftlaba2024
+package com.example.testshiftlaba2024.editNote
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
