@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Test Shift Laba 2024</string>
+
+    <string name="save_changes">Save changes</string>
+    <string name="you_don_t_have_any_notes_yet">You don\'t have\n any notes yet</string>
+    <string name="make_a_note">Make a note</string>
+    <string name="create_note">Create note</string>
+    <string name="delete_note">Delete note</string>
+    <string name="title">Title</string>
+    <string name="save_note">Save note</string>
 </resources>
