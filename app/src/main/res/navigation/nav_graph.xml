@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/createNoteFragment"
-        android:name="com.example.testshiftlaba2024.CreateNoteFragment"
+        android:name="com.example.testshiftlaba2024.createNote.CreateNoteFragment"
         android:label="fragment_create_note"
         tools:layout="@layout/fragment_create_note" >
         <action
