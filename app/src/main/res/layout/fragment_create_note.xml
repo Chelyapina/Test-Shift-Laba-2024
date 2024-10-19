@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="32dp"
-    tools:context=".EditNoteFragment">
+    tools:context=".CreateNoteFragment">
 
     <EditText
         android:id="@+id/make_note_title"
