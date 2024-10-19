@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginVertical="28dp"
-    android:layout_marginHorizontal="16dp"
-    tools:context=".NotesFragment">
+    tools:context=".notes.NotesFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.testshiftlaba2024.notes.NotesViewModel" />
+    </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        tools:ignore="UselessParent">
+        android:layout_marginVertical="28dp"
+        android:layout_marginHorizontal="16dp">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
@@ -41,5 +42,4 @@
             android:textSize="28sp"
             android:text="@string/you_don_t_have_any_notes_yet" />
     </FrameLayout>
-
-</LinearLayout>
+</layout>
