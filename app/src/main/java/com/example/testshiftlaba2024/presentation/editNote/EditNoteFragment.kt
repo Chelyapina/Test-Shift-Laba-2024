@@ -1,4 +1,4 @@
-package com.example.testshiftlaba2024.editNote
+package com.example.testshiftlaba2024.presentation.editNote
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.example.testshiftlaba2024.NoteRepository
+import com.example.testshiftlaba2024.domain.NoteRepository
 import com.example.testshiftlaba2024.R
 import com.example.testshiftlaba2024.databinding.FragmentEditNoteBinding
-import com.example.testshiftlaba2024.storage.NoteDatabase
 
 
 class EditNoteFragment : Fragment() {

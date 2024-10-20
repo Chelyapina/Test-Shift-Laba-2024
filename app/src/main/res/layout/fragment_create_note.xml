@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".createNote.CreateNoteFragment">
+    tools:context=".presentation.createNote.CreateNoteFragment">
 
     <data>
         <variable
             name="viewModel"
-            type="com.example.testshiftlaba2024.createNote.CreateNoteViewModel" />
+            type="com.example.testshiftlaba2024.presentation.createNote.CreateNoteViewModel" />
     </data>
 
     <LinearLayout
@@ -44,7 +44,7 @@
             android:layout_gravity="center"
             android:text="@string/save_note"
             android:layout_margin="16dp"
-            android:onClick="@{() -> viewModel.addNote()}"/>
+            android:onClick="@{v -> viewModel.addNote(v)}"/>
 
     </LinearLayout>
 </layout>

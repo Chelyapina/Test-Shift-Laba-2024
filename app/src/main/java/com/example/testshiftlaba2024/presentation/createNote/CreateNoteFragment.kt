@@ -1,4 +1,4 @@
-package com.example.testshiftlaba2024.createNote
+package com.example.testshiftlaba2024.presentation.createNote
 
 import android.content.Context
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.example.testshiftlaba2024.NoteRepository
+import com.example.testshiftlaba2024.domain.NoteRepository
 import com.example.testshiftlaba2024.R
 import com.example.testshiftlaba2024.databinding.FragmentCreateNoteBinding
 
@@ -34,11 +34,8 @@ class CreateNoteFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-
         viewModel.navigateToNotesList.observe(viewLifecycleOwner, Observer { navigate ->
             if (navigate) {
-                val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                imm.hideSoftInputFromWindow(requireView().windowToken, 0)
                 view.findNavController()
                     .navigate(R.id.action_createNoteFragment_to_notesFragment)
                 viewModel.onNavigateToNotesList()

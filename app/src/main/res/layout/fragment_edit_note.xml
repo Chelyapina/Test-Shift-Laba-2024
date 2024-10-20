@@ -2,12 +2,12 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".editNote.EditNoteFragment">
+    tools:context=".presentation.editNote.EditNoteFragment">
 
     <data>
         <variable
             name="viewModel"
-            type="com.example.testshiftlaba2024.editNote.EditNoteViewModel" />
+            type="com.example.testshiftlaba2024.presentation.editNote.EditNoteViewModel" />
     </data>
 
     <LinearLayout
@@ -36,7 +36,7 @@
             android:inputType="textMultiLine"
             android:textSize="18sp"
             android:lines="5"
-            android:text="@={viewModel.note.noteBody}"/>
+            android:text="@={viewModel.note.noteBody}" />
 
         <Button
             android:id="@+id/saveButton"
@@ -45,7 +45,7 @@
             android:layout_gravity="center"
             android:text="@string/save_changes"
             android:layout_margin="16dp"
-            android:onClick="@{() -> viewModel.updateNote()}"/>
+            android:onClick="@{v -> viewModel.updateNote(v)}"/>
 
         <Button
             android:id="@+id/deleteButton"
@@ -54,7 +54,8 @@
             android:layout_gravity="center"
             android:text="@string/delete_note"
             android:layout_margin="16dp"
-            android:onClick="@{() -> viewModel.deleteNote()}"/>
+
+            android:onClick="@{v -> viewModel.deleteNote(v)}"/>
     </LinearLayout>
 </layout>
 

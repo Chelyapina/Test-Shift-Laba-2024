@@ -1,4 +1,4 @@
-package com.example.testshiftlaba2024.storage
+package com.example.testshiftlaba2024.data.storage
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

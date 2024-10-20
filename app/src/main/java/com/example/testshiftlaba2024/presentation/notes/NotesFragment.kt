@@ -1,4 +1,4 @@
-package com.example.testshiftlaba2024.notes
+package com.example.testshiftlaba2024.presentation.notes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import com.example.testshiftlaba2024.NoteRepository
-import com.example.testshiftlaba2024.NoteItemAdapter
+import com.example.testshiftlaba2024.domain.NoteRepository
+import com.example.testshiftlaba2024.presentation.noteItem.NoteItemAdapter
 import com.example.testshiftlaba2024.databinding.FragmentNotesBinding
 
 class NotesFragment : Fragment() {

@@ -1,9 +1,9 @@
-package com.example.testshiftlaba2024.notes
+package com.example.testshiftlaba2024.presentation.notes
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.testshiftlaba2024.NoteRepository
+import com.example.testshiftlaba2024.domain.NoteRepository
 
 class NotesViewModel(repository: NoteRepository) : ViewModel() {
 

@@ -1,11 +1,12 @@
-package com.example.testshiftlaba2024.editNote
+package com.example.testshiftlaba2024.presentation.editNote
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.testshiftlaba2024.NoteRepository
+import com.example.testshiftlaba2024.domain.NoteRepository
 
 class EditNoteViewModelFactory (private val noteId: Long,
-                                private val repository: NoteRepository) : ViewModelProvider.Factory {
+                                private val repository: NoteRepository
+) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(EditNoteViewModel::class.java)) {
