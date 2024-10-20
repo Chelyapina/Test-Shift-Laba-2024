@@ -1,7 +1,7 @@
-package com.example.testshiftlaba2024
+package com.example.testshiftlaba2024.presentation.noteItem
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.testshiftlaba2024.storage.Note
+import com.example.testshiftlaba2024.data.storage.Note
 
 class NoteDiffItemCallback : DiffUtil.ItemCallback<Note>() {
     override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean

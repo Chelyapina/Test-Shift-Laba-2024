@@ -2,12 +2,12 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".editNote.EditNoteFragment">
+    tools:context=".presentation.editNote.EditNoteFragment">
 
     <data>
         <variable
             name="viewModel"
-            type="com.example.testshiftlaba2024.editNote.EditNoteViewModel" />
+            type="com.example.testshiftlaba2024.presentation.editNote.EditNoteViewModel" />
     </data>
 
     <LinearLayout

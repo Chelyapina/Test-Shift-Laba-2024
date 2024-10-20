@@ -1,8 +1,8 @@
-package com.example.testshiftlaba2024.notes
+package com.example.testshiftlaba2024.presentation.notes
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.testshiftlaba2024.NoteRepository
+import com.example.testshiftlaba2024.domain.NoteRepository
 
 class NotesViewModelFactory(private val repository : NoteRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

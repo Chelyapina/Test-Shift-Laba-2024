@@ -7,7 +7,7 @@
     <data>
         <variable
             name="note"
-            type="com.example.testshiftlaba2024.storage.Note" />
+            type="com.example.testshiftlaba2024.data.storage.Note" />
     </data>
 
     <androidx.cardview.widget.CardView

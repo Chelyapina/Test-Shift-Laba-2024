@@ -1,11 +1,11 @@
-package com.example.testshiftlaba2024
+package com.example.testshiftlaba2024.presentation.noteItem
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testshiftlaba2024.databinding.NoteItemBinding
-import com.example.testshiftlaba2024.storage.Note
+import com.example.testshiftlaba2024.data.storage.Note
 
 class NoteItemAdapter (private val clickListener: (noteId : Long) -> Unit)
     : ListAdapter<Note, NoteItemAdapter.NoteItemViewHolder>(NoteDiffItemCallback()){
@@ -21,7 +21,7 @@ class NoteItemAdapter (private val clickListener: (noteId : Long) -> Unit)
     class NoteItemViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         companion object {
-            fun inflateFrom(parent: ViewGroup): NoteItemViewHolder{
+            fun inflateFrom(parent: ViewGroup): NoteItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = NoteItemBinding.inflate(layoutInflater, parent, false)
                 return NoteItemViewHolder(binding)

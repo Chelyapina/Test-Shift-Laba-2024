@@ -1,11 +1,11 @@
-package com.example.testshiftlaba2024.createNote
+package com.example.testshiftlaba2024.presentation.createNote
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.testshiftlaba2024.NoteRepository
-import com.example.testshiftlaba2024.storage.Note
+import com.example.testshiftlaba2024.domain.NoteRepository
+import com.example.testshiftlaba2024.data.storage.Note
 import kotlinx.coroutines.launch
 
 class CreateNoteViewModel(private val repository: NoteRepository) : ViewModel() {

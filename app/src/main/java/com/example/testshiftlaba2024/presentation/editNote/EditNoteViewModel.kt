@@ -1,10 +1,10 @@
-package com.example.testshiftlaba2024.editNote
+package com.example.testshiftlaba2024.presentation.editNote
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.testshiftlaba2024.NoteRepository
+import com.example.testshiftlaba2024.domain.NoteRepository
 import kotlinx.coroutines.launch
 
 class EditNoteViewModel (noteId : Long, private val repository : NoteRepository) : ViewModel() {
