@@ -62,7 +62,13 @@ RecyclerView: DiffUtil,<BR>
 <H2>Фичи</H2>
 <H4>
   Темная и светлая тема
+
+  ![theme](https://github.com/user-attachments/assets/f86bf1e6-1df6-4651-ad3e-9bf39a3d0b50)
+
 </H4>
 <H4>
   Поддержка двух языков
+
+  ![lang](https://github.com/user-attachments/assets/4017c9c1-bb42-4ec3-83cc-0c7e8487e301)
+
 </H4>
