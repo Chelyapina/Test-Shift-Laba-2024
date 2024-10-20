@@ -3,17 +3,17 @@ package com.example.testshiftlaba2024.notes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.testshiftlaba2024.storage.NoteDao
+import com.example.testshiftlaba2024.NoteRepository
 
-class NotesViewModel (val dao : NoteDao) : ViewModel() {
+class NotesViewModel(repository: NoteRepository) : ViewModel() {
 
     private val _navigateToNoteEditor = MutableLiveData<Long?>()
     val navigateToNoteEditor: LiveData<Long?>
         get() = _navigateToNoteEditor
 
-    val notes = dao.getAll()
+    val notes = repository.getAllNotes()
 
-    val notesCountLiveData: LiveData<Int> = dao.getCount()
+    val notesCountLiveData: LiveData<Int> = repository.getCountNote()
 
     fun onNoteClicked(taskId: Long){
         _navigateToNoteEditor.value = taskId

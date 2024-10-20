@@ -2,12 +2,12 @@ package com.example.testshiftlaba2024.notes
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.testshiftlaba2024.storage.NoteDao
+import com.example.testshiftlaba2024.NoteRepository
 
-class NotesViewModelFactory(private val dao : NoteDao) : ViewModelProvider.Factory {
+class NotesViewModelFactory(private val repository : NoteRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(NotesViewModel::class.java)){
-            return NotesViewModel(dao) as T
+            return NotesViewModel(repository) as T
         }
         throw IllegalArgumentException("Unknown VM")
     }
