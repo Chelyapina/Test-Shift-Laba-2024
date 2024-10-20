@@ -34,11 +34,8 @@ class CreateNoteFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-
         viewModel.navigateToNotesList.observe(viewLifecycleOwner, Observer { navigate ->
             if (navigate) {
-                val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                imm.hideSoftInputFromWindow(requireView().windowToken, 0)
                 view.findNavController()
                     .navigate(R.id.action_createNoteFragment_to_notesFragment)
                 viewModel.onNavigateToNotesList()
