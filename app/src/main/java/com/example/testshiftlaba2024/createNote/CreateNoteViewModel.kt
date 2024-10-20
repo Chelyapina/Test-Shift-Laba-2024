@@ -4,12 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.testshiftlaba2024.NoteRepository
 import com.example.testshiftlaba2024.storage.Note
-import com.example.testshiftlaba2024.storage.NoteDao
 import kotlinx.coroutines.launch
 
-class CreateNoteViewModel (val dao: NoteDao) : ViewModel() {
-    val note = dao.getAll()
+class CreateNoteViewModel(private val repository: NoteRepository) : ViewModel() {
+    val note = repository.getAllNotes()
     var newNoteTitle = ""
     var newNoteBody = ""
 
@@ -22,7 +22,7 @@ class CreateNoteViewModel (val dao: NoteDao) : ViewModel() {
             val note = Note()
             note.noteTitle = newNoteTitle
             note.noteBody = newNoteBody
-            dao.insert(note)
+            repository.insertNote(note)
             _navigateToNotesList.value = true
         }
     }

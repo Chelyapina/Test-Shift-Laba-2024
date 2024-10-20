@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.testshiftlaba2024.NoteRepository
 import com.example.testshiftlaba2024.R
 import com.example.testshiftlaba2024.databinding.FragmentEditNoteBinding
 import com.example.testshiftlaba2024.storage.NoteDatabase
@@ -27,9 +28,9 @@ class EditNoteFragment : Fragment() {
         val noteId = EditNoteFragmentArgs.fromBundle(requireArguments()).noteId
 
         val application = requireNotNull(this.activity).application
-        val dao = NoteDatabase.getInstance(application).noteDao
+        val repository = NoteRepository.getInstance(application)
 
-        val viewModelFactory = EditNoteViewModelFactory(noteId, dao)
+        val viewModelFactory = EditNoteViewModelFactory(noteId, repository)
         val viewModel = ViewModelProvider(this, viewModelFactory)
             .get(EditNoteViewModel::class.java)
 

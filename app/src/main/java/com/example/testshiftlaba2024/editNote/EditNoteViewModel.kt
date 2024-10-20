@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.testshiftlaba2024.storage.NoteDao
+import com.example.testshiftlaba2024.NoteRepository
 import kotlinx.coroutines.launch
 
-class EditNoteViewModel (noteId : Long, val dao : NoteDao) : ViewModel() {
-    val note = dao.get(noteId)
+class EditNoteViewModel (noteId : Long, private val repository : NoteRepository) : ViewModel() {
+    val note = repository.getNoteById(noteId)
 
     private val _navigateToNotesList = MutableLiveData<Boolean>(false)
     val navigateToNotesList : LiveData<Boolean>
@@ -16,14 +16,14 @@ class EditNoteViewModel (noteId : Long, val dao : NoteDao) : ViewModel() {
 
     fun updateNote(){
         viewModelScope.launch {
-            dao.update(note.value!!)
+            repository.updateNote(note.value!!)
             _navigateToNotesList.value = true
         }
     }
 
     fun deleteNote(){
         viewModelScope.launch {
-            dao.delete(note.value!!)
+            repository.deleteNote(note.value!!)
             _navigateToNotesList.value = true
         }
     }

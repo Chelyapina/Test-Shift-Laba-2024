@@ -10,9 +10,9 @@ import android.view.inputmethod.InputMethodManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.testshiftlaba2024.NoteRepository
 import com.example.testshiftlaba2024.R
 import com.example.testshiftlaba2024.databinding.FragmentCreateNoteBinding
-import com.example.testshiftlaba2024.storage.NoteDatabase
 
 class CreateNoteFragment : Fragment() {
     private var _binding: FragmentCreateNoteBinding? = null
@@ -26,9 +26,8 @@ class CreateNoteFragment : Fragment() {
         val view = binding.root
 
         val application = requireNotNull(this.activity).application
-        val dao = NoteDatabase.getInstance(application).noteDao
-
-        val viewModelFactory = CreateNoteViewModelFactory(dao)
+        val repository = NoteRepository.getInstance(application)
+        val viewModelFactory = CreateNoteViewModelFactory(repository)
         val viewModel = ViewModelProvider(this, viewModelFactory)
             .get(CreateNoteViewModel::class.java)
 
