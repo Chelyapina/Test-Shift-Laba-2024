@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Тестовое ШИФТ Лаба 2024</string>
+
+    <string name="save_changes">Изменить</string>
+    <string name="you_don_t_have_any_notes_yet">У вас пока нет заметок</string>
+    <string name="make_a_note">Текст</string>
+    <string name="create_note">Создать</string>
+    <string name="delete_note">Удалить</string>
+    <string name="title">Название</string>
+    <string name="save_note">Создать</string>
+</resources>
